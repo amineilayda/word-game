@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 1. KATMAN: ARKA PLAN GÖRSELİ -->
+    <ImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/a"
+        android:scaleType="centerCrop"
+        android:alpha="0.8" />
+
+    <!-- 2. KATMAN: ZORLUK SEÇİM MENÜSÜ -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <TextView
+            android:text="Zorluk Seçin"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="40dp"
+            android:shadowColor="#000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- KOLAY BUTONU -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEasy"
+            android:layout_width="240dp"
+            android:layout_height="65dp"
+            android:text="Kolay (10x10)"
+            android:onClick="easy"
+            android:backgroundTint="@color/orange"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:cornerRadius="15dp"
+            app:icon="@android:drawable/btn_star_big_on"
+            app:iconGravity="textStart"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- ORTA BUTONU -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMedium"
+            android:layout_width="240dp"
+            android:layout_height="65dp"
+            android:text="Orta (8x8)"
+            android:onClick="medium"
+            android:backgroundTint="@color/orange"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:cornerRadius="15dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- ZOR BUTONU -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnHard"
+            android:layout_width="240dp"
+            android:layout_height="65dp"
+            android:text="Zor (6x6)"
+            android:onClick="hard"
+            android:backgroundTint="@color/orange"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:cornerRadius="15dp"
+            app:strokeWidth="2dp"
+            app:strokeColor="#FF0000"/>
+        <!-- Zor butonunun kenarını kırmızı yaparak vurguladık -->
+
+    </LinearLayout>
+</FrameLayout>

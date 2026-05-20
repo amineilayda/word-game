@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 1. KATMAN: ARKA PLAN GÖRSELİ -->
+    <ImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/a"
+        android:scaleType="centerCrop"
+        android:alpha="0.8" />
+
+    <!-- 2. KATMAN: ÜST ÜSTE BİNEN BUTONLAR VE YAZILAR -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <TextView
+            android:text="KELİME OYUNU"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:shadowColor="#000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="5"
+            android:layout_marginBottom="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txtUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hoş geldin, User"
+            android:textColor="#FF000000"
+            android:textSize="18sp"
+            android:layout_marginBottom="30dp"/>
+
+        <!-- YENİ OYUN BUTONU -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNewGame"
+            android:layout_width="220dp"
+            android:layout_height="60dp"
+            android:text="YENİ OYUN"
+            android:textSize="16sp"
+            android:backgroundTint="@color/orange"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="30dp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- SKOR TABLOSU BUTONU -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnScore"
+            android:layout_width="220dp"
+            android:layout_height="60dp"
+            android:text="SKOR TABLOSU"
+            android:textSize="16sp"
+            android:backgroundTint="@color/orange"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="30dp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- KULLANICI DEĞİŞTİR BUTONU -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnChangeUser"
+            android:layout_width="220dp"
+            android:layout_height="60dp"
+            android:text="KULLANICI DEĞİŞTİR"
+            android:textSize="14sp"
+            android:backgroundTint="@color/orange"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="30dp"
+            app:strokeColor="#FFFFFF"
+            app:strokeWidth="1dp" />
+
+    </LinearLayout>
+</FrameLayout>

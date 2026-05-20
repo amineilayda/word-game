@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 1. KATMAN: ARKA PLAN GÖRSELİ -->
+    <ImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/a"
+        android:scaleType="centerCrop"
+        android:alpha="0.6" /> <!-- Oyun alanında dikkati dağıtmaması için biraz daha şeffaf yaptık -->
+
+    <!-- 2. KATMAN: OYUN ARAYÜZÜ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+
+        <!-- ÜST BİLGİ PANELİ (Skor ve Hamle) -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#CCFFFFFF"
+            android:layout_marginBottom="16dp">
+            <!-- #CCFFFFFF: %80 şeffaf beyaz -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/tvScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Puan: 0"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvMoves"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Hamle: 25"
+                    android:textStyle="bold"
+                    android:textColor="@color/orange"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvWordCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/tvScore"
+                    android:text="Kelime Sayısı: 0"
+                    android:layout_marginTop="4dp"
+                    android:textColor="#666666" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- OYUN ALANI (Harf Tablosu) -->
+        <com.example.wordgame.ui.GameGridView
+            android:id="@+id/gameGridView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="16dp" />
+
+        <!-- SEÇİLEN KELİME BANDI -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="@color/orange"
+            app:cardElevation="6dp">
+
+            <TextView
+                android:id="@+id/tvCurrentWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:gravity="center"
+                android:text="KELİME"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</FrameLayout>

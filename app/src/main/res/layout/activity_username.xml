@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/light_orange"
+    android:padding="20dp">
+
+    <TextView
+        android:text="OYUNCU GİRİŞİ"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/orange"
+        android:layout_marginBottom="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- Kullanıcı Adı Giriş Alanı -->
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:hint="Kullanıcı adı"
+        android:background="@android:color/white"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:elevation="2dp"
+        android:inputType="textPersonName"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Başla Butonu -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnStart"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:text="BAŞLA"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/orange"
+        app:cornerRadius="30dp"
+        app:elevation="4dp"/>
+
+</LinearLayout>
