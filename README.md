@@ -113,7 +113,7 @@ java/com.example.wordgame
 ### Projeyi Çalıştırma
 
 ```bash
-git clone https://github.com/kullaniciadi/WordGame.git
+git clone https://github.com/kullaniciadi/word-game.git
 ```
 
 Android Studio ile açtıktan sonra:
